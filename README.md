@@ -1,101 +1,84 @@
 
-# 📊 Customer Churn Prediction
 
-## 📌 Project Overview
+# Customer Churn Prediction Project
 
-This project focuses on predicting customer churn using machine learning techniques. The goal is to analyze telecom customer data, identify key factors driving churn, and build a predictive model that can help businesses take proactive actions to retain customers.
-
-By the end of the project, we not only explored data insights but also deployed a **tuned Random Forest model** to achieve reliable predictions.
+📊 **Goal**: To predict whether a customer will churn (leave the service) or stay, using the Telco Customer Churn dataset.
 
 ---
 
-## 🎯 Objectives
+## 🔍 Project Overview
 
-* Perform **exploratory data analysis (EDA)** to understand customer behavior.
-* Clean and preprocess data (handling missing values, encoding categorical features, etc.).
-* Identify **key drivers of churn** (tenure, contract type, monthly charges, etc.).
-* Build and evaluate **machine learning models** (Logistic Regression, Decision Trees, Random Forest).
-* Tune the best model for **higher accuracy and balanced performance**.
-* Save the final model using `joblib` for future deployment.
+This was one of my first **end-to-end machine learning projects**. The main aim was to explore the data, clean and preprocess it, build prediction models, and understand which factors contribute most to customer churn. 
+
+I chose this project because churn is a **real-world business problem** faced by telecom, banking, and subscription-based industries.
 
 ---
 
-## 🛠️ Tech Stack & Tools
+## 🛠️ What I Did
 
-* **Python**  (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)
-* **Jupyter Notebook / VS Code** for development
-* **Joblib** for model persistence
-* **Git & GitHub** for version control
+* **Data Cleaning & Preprocessing**
 
----
+  * Handled missing values and duplicates.
+  * Converted categorical variables into dummy variables.
+  * Dealt with class imbalance in the target variable.
 
-## 📂 Project Workflow
+* **Exploratory Data Analysis (EDA)**
 
-1. **Data Understanding & Cleaning**
+  * Used visualizations (histograms, boxplots, bar charts) to explore customer behavior.
+  * Found key trends: customers with shorter tenure and higher monthly charges churn more often.
 
-   * Removed duplicates, handled missing values
-   * Converted categorical features into numerical (dummy encoding)
-   * Grouped tenure values into ranges for better interpretation
+* **Feature Engineering**
 
-2. **Exploratory Data Analysis (EDA)**
+  * Created new grouped variables (e.g., tenure groups).
+  * Scaled numerical features for better model performance.
 
-   * Visualized churn distribution
-   * Univariate and bivariate analysis (categorical & numerical features)
-   * Correlation checks
+* **Model Building & Evaluation**
 
-3. **Feature Engineering & Preprocessing**
-
-   * Created dummy variables (avoiding dummy variable trap)
-   * Standardized numerical features
-
-4. **Model Building & Evaluation**
-
-   * Baseline models: Logistic Regression, Decision Tree, Random Forest
-   * Metrics: Accuracy, Precision, Recall, F1-score, Confusion Matrix
-   * Chose **Random Forest** as final model
-
-5. **Hyperparameter Tuning**
-
-   * Used GridSearchCV for optimal parameters
-   * Improved recall for minority class (Churn = 1)
-
-6. **Model Saving**
-
-   * Final model stored as `final_churn_model.pkl` using `joblib`
+  * Built classification models: Logistic Regression, Random Forest, and Gradient Boosting.
+  * Evaluated models with Accuracy, Precision, Recall, F1-score, and ROC-AUC.
+  * Focused on **Recall** since identifying churned customers is more important than overall accuracy.
 
 ---
 
-## 📈 Results
+## 📈 Key Insights
 
-* **Best Model:** Tuned Random Forest
-* **Accuracy (Test Set):** \~80%
-* **Recall for Churn Class:** Significantly improved after tuning
-* Key Insight: Contract type, tenure, and monthly charges were the strongest predictors of churn.
-
----
-
-## 🚀 Future Improvements
-
-* Deploy the model as a **web app** using Flask/Streamlit.
-* Add **real-time prediction API** for businesses.
-* Include **customer segmentation analysis** for better retention strategies.
+* Customers with **month-to-month contracts** and **no online security/tech support** are much more likely to churn.
+* **Tenure** plays a big role — the shorter the customer relationship, the higher the churn risk.
+* Even a small increase in customer retention can have a **huge impact on revenue**.
 
 ---
 
-## 📬 Contact
+## 🚀 Tools & Technologies
 
-👤 **Nikhil Chauhan**
+* **Python** (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)
+* **Jupyter Notebook** for analysis & documentation
+
+---
+
+## 💡 Learnings
+
+* Learned how to handle **imbalanced datasets**.
+* Understood the importance of choosing the right evaluation metric.
+* Improved my **EDA storytelling skills** — making plots that explain patterns clearly.
+
+---
+
+## 📂 Repository Structure
+
+```
+📁 Customer-Churn-Project
+│── 📄 README.md
+│── 📄 churn_analysis.ipynb   # Main notebook
+│── 📄 telco_data.csv         # Dataset
+│── 📄 churn_predictions.csv  # Final predictions (if applicable)
+```
+
+---
+
+## 👤 Author
+
+**Nikhil Chauhan**
+🎓 MSc Statistics | Aspiring Data Analyst
 🔗 [LinkedIn](https://www.linkedin.com/in/nikhil-chauhan-755858371/)
-📧 Email: *(chauhannikhil.email@gmail.com)*
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** – feel free to use, modify, and share with attribution.
-
----
-
-✨ This project demonstrates end-to-end **Data Science workflow** – from raw data to actionable machine learning insights.
 
 

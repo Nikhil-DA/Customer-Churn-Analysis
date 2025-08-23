@@ -66,11 +66,21 @@ I chose this project because churn is a **real-world business problem** faced by
 ## 📂 Repository Structure
 
 ```
-📁 Customer-Churn-Project
-│── 📄 README.md
-│── 📄 churn_analysis.ipynb   # Main notebook
-│── 📄 telco_data.csv         # Dataset
-│── 📄 churn_predictions.csv  # Final predictions (if applicable)
+├── data/
+│   ├── raw/                       # Original dataset (unchanged)
+│   ├── final/                     # Final cleaned/processed dataset
+│
+├── outputs/
+│   ├── final_churn_model.pkl      # Saved trained model
+│
+├── scripts/
+│   ├── 01_EDA_Churn_Analysis.ipynb
+│   ├── 02_Modeling_Churn_Prediction.ipynb
+│
+├── LICENSE                      
+├── README.md                      
+├── requirements.txt               
+
 ```
 
 ---
